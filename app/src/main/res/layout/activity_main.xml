@@ -1,68 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E74C3C"
+    android:background="#1e1d1d"
     android:orientation="vertical"
     android:padding="25dp"
     tools:context=".MainActivity">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="hot"
-        android:textSize="45sp"/>
+        android:layout_centerVertical="true"
+        android:id="@+id/centralhorizontaline"/>
 
-
-
-    <EditText
-        android:id="@+id/heighttxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your height"
-        android:textColorHint="@color/white"
-        android:layout_marginTop="100dp"
-
-
-        />
-<EditText
-        android:id="@+id/weighttxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your weight"
-        android:textColorHint="@color/white"
-        android:layout_marginTop="20dp"
-
-
-        />
-
-    <Button
-        android:id="@+id/calbut"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:backgroundTint="#616A6B"
-        android:layout_marginLeft="120dp"
-        android:text="Calculate"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/centralverticaline"/>
+
+
+    <RelativeLayout
+        android:id="@+id/heightlayout"
+        android:layout_width="340dp"
+        android:layout_height="150dp"
+        android:layout_above="@id/centralhorizontaline"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-50dp"
+        android:background="@drawable/cardbackground"
         >
 
-    </Button>
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/white"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        android:layout_marginLeft="122dp"
-        android:layout_marginTop="40dp"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Height"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/currentheiht"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="50dp"
+            android:text="170"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold"
+
+            >
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/currentheiht"
+            android:text="Cm"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+
+        </TextView>
+
+        <SeekBar
+            android:id="@+id/seekbarforheight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:progressTint="#FF4c4c"
+
+            >
+
+        </SeekBar>
+
+
+    </RelativeLayout>
 
 
 
 
-</LinearLayout>
+</RelativeLayout>
