@@ -23,11 +23,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        height = (EditText) findViewById(R.id.heighttxt);
-        weight = (EditText) findViewById(R.id.weighttxt);
-        button = findViewById(R.id.calbut);
-        result = findViewById(R.id.result);
-
 
 
 
