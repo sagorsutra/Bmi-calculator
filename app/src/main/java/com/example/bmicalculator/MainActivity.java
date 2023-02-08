@@ -11,9 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 
-    EditText height, weight;
-    Button button;
-    TextView result;
+   
 
 
 
@@ -26,33 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        int heigt,wight;
-
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                String value  = height.getText().toString();
-                String val = weight.getText().toString();
-
-                float val1 = Float.parseFloat(value);
-                float val2 = Float.parseFloat(val);
-
-
-
-                float ans = val2/(val1 * val1);
-
-                String finl = Float.toString(ans);
-
-
-                result.setText(finl);
-
-
-
-            }
-        });
 
 
 

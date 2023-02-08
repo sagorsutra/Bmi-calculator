@@ -23,14 +23,88 @@
 
 
     <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="35dp"
+        android:layout_toStartOf="@id/centralverticaline"
+        android:background="@drawable/cardbackground">
+
+
+        <ImageView
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_above="@id/textmale"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/male" />
+
+
+        <TextView
+            android:id="@+id/textmale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:text="Male"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_toEndOf="@id/centralverticaline"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/cardbackground">
+
+        <ImageView
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:src="@drawable/female"
+            android:layout_centerInParent="true"
+            android:layout_above="@id/textfemale"
+            android:layout_marginBottom="20dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:text="Female"
+            android:textColor="@color/white"
+            android:id="@+id/textfemale"
+            android:textSize="18sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
         android:id="@+id/heightlayout"
         android:layout_width="340dp"
         android:layout_height="150dp"
         android:layout_above="@id/centralhorizontaline"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="-50dp"
-        android:background="@drawable/cardbackground"
-        >
+        android:background="@drawable/cardbackground">
 
 
         <TextView
@@ -90,6 +164,20 @@
 
 
     </RelativeLayout>
+
+
+    <android.widget.Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="calculate Bmi"
+        android:background="@drawable/buttoncard"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/calbutton"
+        >
+
+    </android.widget.Button>
+
 
 
 
