@@ -5,7 +5,10 @@
       <map>
         <entry key="..\:/Android with jubayer season 1/BMIcalculator/app/src/main/res/drawable/buttoncard.xml" value="0.2015" />
         <entry key="..\:/Android with jubayer season 1/BMIcalculator/app/src/main/res/drawable/cardbackground.xml" value="0.2015" />
+        <entry key="..\:/Android with jubayer season 1/BMIcalculator/app/src/main/res/drawable/malefemalefocus.xml" value="0.2015" />
+        <entry key="..\:/Android with jubayer season 1/BMIcalculator/app/src/main/res/drawable/malefemalenotfocus.xml" value="0.2015" />
         <entry key="..\:/Android with jubayer season 1/BMIcalculator/app/src/main/res/drawable/plusminus.xml" value="0.2015" />
+        <entry key="..\:/Android with jubayer season 1/BMIcalculator/app/src/main/res/layout/activity_bmiactivity.xml" value="0.23229166666666667" />
         <entry key="..\:/Android with jubayer season 1/BMIcalculator/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Android with jubayer season 1/BMIcalculator/app/src/main/res/layout/activity_splash.xml" value="0.23229166666666667" />
         <entry key="..\:/Android with jubayer season 1/BMIcalculator/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2015" />
