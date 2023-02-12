@@ -28,20 +28,21 @@ public class bmiactivity extends AppCompatActivity {
 
         Intent intent;
 
-        String  Gender = getIntent().getStringExtra("Gender");
+        String  Gender = getIntent().getStringExtra("Gender");     //receiving data of another window
         String  weight = getIntent().getStringExtra("weight");
         String  age = getIntent().getStringExtra("age");
         String  height = getIntent().getStringExtra("height");
 
         float rweight = Float.parseFloat(weight);
         float rheight = Float.parseFloat(height);
+        float n;
 
         float Mheight = rheight/100;
 
         float ans = rweight/(Mheight*Mheight);
 
         String answer = String.valueOf(ans);
-        showbmi.setText(answer);
+        showbmi.setText(answer);    //These two this will be fixed that's why they're not in the loop
         gender.setText(Gender);
 
         /*
@@ -56,7 +57,6 @@ public class bmiactivity extends AppCompatActivity {
         {
             category.setText("You're underweight");
             sign.setImageResource(R.drawable.crosss);
-
         }
         else if (ans>18.5 && ans<25)
         {
@@ -73,8 +73,6 @@ public class bmiactivity extends AppCompatActivity {
             category.setText("You are in obesity range");
             sign.setImageResource(R.drawable.warning);
         }
-
-
 
 
 

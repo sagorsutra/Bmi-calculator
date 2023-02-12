@@ -163,9 +163,9 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else {
                 Intent intent = new Intent(MainActivity.this,bmiactivity.class);
-                intent.putExtra("Gender",typeuser);
-                intent.putExtra("weight",weight2);
-                intent.putExtra("age",age2);
+                intent.putExtra("Gender",typeuser);  //when we receive the value we'll receive as a String
+                intent.putExtra("weight",weight2);   //That's why we're string value
+                intent.putExtra("age",age2);         // Sending data one activity to another activity in intent.putExtra
                 intent.putExtra("height",intprogress);
                 startActivity(intent);
                 finish();
