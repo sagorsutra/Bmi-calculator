@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextClock;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,10 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
    int age =22;
    int weight =55;
-   int height = 170;
    int currprogress;
-   String intprogress ="170";
-   String typeuser = "0";
+   String intprogress ="170";  // this is for height
+   String typeuser = "0";     //This variable is for tracking calculation for gender.
    String weight2 = "55";
    String age2 = "22";
 
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         calculate = findViewById(R.id.calbutton);
         incrementwight = findViewById(R.id.incremetweight);
-        decrementwight = findViewById(R.id.decrementage);
+        decrementwight = findViewById(R.id.decrementweight);
         curweight = findViewById(R.id.currentweight);
         currheight = findViewById(R.id.currentheight);
         currage = findViewById(R.id.currentage);
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         seekbarforheight.setMax(300);
-        seekbarforheight.setProgress(170);
+        seekbarforheight.setProgress(120);
         seekbarforheight.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -100,13 +100,76 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+            incrementwight.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    weight  = weight+1;
+                    weight2 = String.valueOf(weight);
+                    curweight.setText(weight2);
+                }
+            });
+
+            decrementwight.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    weight  = weight - 1;
+                    weight2 = String.valueOf(weight);
+                   curweight.setText(weight2);
+                }
+            });
+
+            incrage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    age  = age+1;
+                    age2 = String.valueOf(age);
+                    currage.setText(age2);
+                }
+            });
+
+             decreage.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View view) {
+                    age  = age-1;
+                    age2 = String.valueOf(age);
+                    currage.setText(age2);
+            }
+        });
+
+
+
+
+
 
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if (typeuser.equals("0"))
+                {
+                    Toast.makeText(getApplicationContext(),"Select your gender",Toast.LENGTH_SHORT);
+                }
+                else if (intprogress.equals("0"))
+                {
+                    Toast.makeText(getApplicationContext(),"Weight is Incorrect",Toast.LENGTH_SHORT);
+                }
+                else if (weight ==0 || weight<0)
+                {
+                    Toast.makeText(getApplicationContext(),"Weight is Incorrect",Toast.LENGTH_SHORT);
+                }
+                else if (age==0 || age<0)
+                {
+                    Toast.makeText(getApplicationContext(),"Age is incorrect",Toast.LENGTH_SHORT);
+                }
+                else {
                 Intent intent = new Intent(MainActivity.this,bmiactivity.class);
+                intent.putExtra("Gender",typeuser);
+                intent.putExtra("weight",weight2);
+                intent.putExtra("age",age2);
+                intent.putExtra("height",intprogress);
                 startActivity(intent);
                 finish();
+                }
             }
         });
 
